@@ -1,0 +1,18 @@
+{
+    "name": "vbl/stock_tracking",
+    "description": "VBL Distributor Stock Tracking System",
+    "type": "project",
+    "license": "Commercial",
+    "autoload": {
+        "psr-4": {
+            "Vbl\\StockTracking\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "MIS Team VBL"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {}
+}
