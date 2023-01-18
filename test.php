@@ -1,3 +1,4 @@
 <?php
-echo "Test commits";
+
+echo "<h1> Test commits </h1>";
 ?>
