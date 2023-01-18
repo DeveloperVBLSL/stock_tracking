@@ -1,9 +1,8 @@
 <?php
-$conn = mysqli_connect("localhost","u428164805_db_system","$DhR19c@789v","u428164805_stock_tracking");
+$conn = mysqli_connect("localhost","root","","stock");
 
 // Check connection
 if (mysqli_connect_errno())
   {
   echo "Failed to connect to MySQL: " . mysqli_connect_error();
   }
-?>
