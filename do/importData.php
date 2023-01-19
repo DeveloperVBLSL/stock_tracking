@@ -27,7 +27,7 @@ if(isset($_POST['importSubmit'])){
                 $pack  = $line[1];
                 $brand  = $line[2];
                 $amount = $line[3];
-                $area = $_SESSION["uname"];
+                $area =$_POST['area'];
                 $date=$_POST['dateForm'];
                                 
                 // Insert member data in the database
