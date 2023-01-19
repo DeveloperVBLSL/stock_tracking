@@ -30,7 +30,10 @@
 
 <form action="addTempory.php" method="POST">
 <input style="border: none; outline:none; background-color:bisque;" type='date' id='hasta' value='' name="date" required>
-<input type="hidden" name="area" value="<?php echo $_SESSION["uname"];  ?>" />
+<select style="background-color:grey;color:white;" name="area" id="dbArea">
+  		    <option value="kandy">Kandy</option>
+  		    <option value="kaduwela">Kaduwela</option>
+  		    </select>
 
 <center>
 
