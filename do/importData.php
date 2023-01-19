@@ -1,5 +1,5 @@
 <?php
-include('header.php');
+//include('header.php');
 // Load the database configuration file
 include_once '../database/conn.php';
 
