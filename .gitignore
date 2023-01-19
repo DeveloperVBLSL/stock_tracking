@@ -6,3 +6,5 @@ config.log
 .sconf_temp
 
 database/
+database/conn.php
+database/stock.sql
