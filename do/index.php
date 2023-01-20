@@ -10,13 +10,12 @@
 <center>
 <div class="col-md-12" id="importFrm" style="display: none; border-style: outset; width:50%; background-color:beige; padding:5px;">
         <form action="importData.php" method="post" enctype="multipart/form-data">
-		<select name="area" id="db">
-  		<option value="kandy">Kandy</option>
-  		<option value="kaduwela">Kaduwela</option>
-  		
-		</select>
-			<input type='date'  value='' name="dateForm" required/>
-            <input type="file" name="doc" required/>
+            <select name="area" id="db">
+  		    <option value="kandy">Kandy</option>
+  		    <option value="kaduwela">Kaduwela</option>
+  		    </select>
+			<input type="file" name="doc" required/>
+            <input type='date'  value='' name="dateForm" required/>
             <input style="background-color:yellow;color:black" type="submit" class="btn btn-primary" name="importSubmit" value="IMPORT">
         </form>
 </br>

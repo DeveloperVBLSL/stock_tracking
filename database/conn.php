@@ -1,5 +1,5 @@
 <?php
-$conn = mysqli_connect("localhost","u428164805_db_system","Welcome@321#","u428164805_stock_tracking");
+$conn = mysqli_connect("localhost","id18229689_root12","+>wR3ElHc2?uZL7m","id18229689_stock");
 
 // Check connection
 if (mysqli_connect_errno())

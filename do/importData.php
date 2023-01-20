@@ -1,6 +1,7 @@
 <?php
 
 /*
+
 //include('header.php');
 // Load the database configuration file
 include_once '../database/conn.php';
@@ -8,7 +9,7 @@ include_once '../database/conn.php';
 if(isset($_POST['importSubmit'])){
     
     // Allowed mime types
-    $csvMimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain');
+    $csvMimes = array('text/x-comma-separated-values', 'text/comma-separated-values', 'application/octet-stream', 'application/vnd.ms-excel', 'application/x-csv', 'text/x-csv', 'text/csv', 'application/csv', 'application/excel', 'application/vnd.msexcel', 'text/plain', 'text/xls', 'text/xlsx', 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet');
     
     // Validate whether selected file is a CSV file
     if(!empty($_FILES['file']['name']) && in_array($_FILES['file']['type'], $csvMimes)){
@@ -29,7 +30,7 @@ if(isset($_POST['importSubmit'])){
                 $pack  = $line[1];
                 $brand  = $line[2];
                 $amount = $line[3];
-                $area =$_POST['area'];
+                $area = $_POST['area'];
                 $date=$_POST['dateForm'];
                                 
                 // Insert member data in the database
@@ -54,7 +55,6 @@ header("location:viewExcel.php?dateNew=$date");
 
 */
 
-
 include_once '../database/conn.php';
 
 if(isset($_POST['importSubmit'])){
@@ -72,18 +72,20 @@ if(isset($_POST['importSubmit'])){
 			for($i=2;$i<=$getHighestRow;$i++){
 				$item=$sheet->getCellByColumnAndRow(0,$i)->getValue();
 				$pack=$sheet->getCellByColumnAndRow(1,$i)->getValue();
-                $brand=$sheet->getCellByColumnAndRow(2,$i)->getValue();
-                $amount=$sheet->getCellByColumnAndRow(3,$i)->getValue();
-                $area =$_POST['area'];
+				$brand=$sheet->getCellByColumnAndRow(2,$i)->getValue();
+				$amount=$sheet->getCellByColumnAndRow(3,$i)->getValue();
+				$area = $_POST['area'];
                 $date=$_POST['dateForm'];
 				if($item!=''){
-					mysqli_query($conc,"INSERT INTO temporystock (item, pack, brand, amount, updateDate,area) VALUES ('".$item."', '".$pack."', '".$brand."', '".$amount."', '".$date."', '".$area."')");
+					mysqli_query($conn,"insert into temporystock(item,pack,brand,amount,area,updateDate) values('$item','$pack','$brand','$amount','$area','$date')");
 				}
 			}
 		}
-        header("location:viewExcel.php?dateNew=$date");
 	}else{
 		echo "Invalid file format";
 	}
+	header("location:viewExcel.php?dateNew=$date");
 }
+
+
 ?>
