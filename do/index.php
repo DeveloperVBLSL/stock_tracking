@@ -16,7 +16,7 @@
   		
 		</select>
 			<input type='date'  value='' name="dateForm" required/>
-            <input type="file" name="file" required/>
+            <input type="file" name="doc" required/>
             <input style="background-color:yellow;color:black" type="submit" class="btn btn-primary" name="importSubmit" value="IMPORT">
         </form>
 </br>
