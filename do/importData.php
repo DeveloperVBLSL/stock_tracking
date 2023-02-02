@@ -84,7 +84,7 @@ if(isset($_POST['importSubmit'])){
 	}else{
 		echo "Invalid file format";
 	}
-	header("location:viewExcel.php?dateNew=$date");
+	header("location:viewExcel.php?dateNew=$date&area=$area");
 }
 
 

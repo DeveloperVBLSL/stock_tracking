@@ -21,7 +21,7 @@
 
         }
         
-		header("location:view.php?dateNew=$date");
+		header("location:view.php?dateNew=$date&area=$area");
 		
     }
 ?>

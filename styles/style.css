@@ -60,3 +60,68 @@ a{
     float: right;  
     background-color: grey;  
 }  
+
+@media only screen and (max-width: 600px) {
+  body  
+{  
+    margin: 0;  
+    padding: 0;  
+    background-color:black;  
+    font-family: 'Arial';  
+}  
+.login{  
+        width: 50%;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        margin-top: 25%;
+        padding: 10%;  
+        background: white;  
+        border-radius: 25px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: blue;  
+   
+}  
+label{  
+    color: black;  
+    font-size: 17px;  
+}  
+#Uname{  
+    width: 100%;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#Pass{  
+    width: 100%;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#log{  
+    width: 50%;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;
+    font-weight: bolder;  
+    padding-left: 7px;  
+    color: rgb(26, 103, 48); 
+    background-color: aqua; 
+  
+  
+}  
+span{  
+    color: white;  
+    font-size: 17px;  
+}  
+a{  
+    float: right;  
+    background-color: grey;  
+} 
+}

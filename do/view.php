@@ -16,7 +16,7 @@
   <div class="column" style="background-color:beige;">
   
     <center>
-  <h3>Brand Wise Summary</h3>
+  <h3>Brand Wise Summary <?php echo $_GET['area'];  ?></h3>
 
 
           <table border="1" style="width: 100%;">
@@ -32,7 +32,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='7 Up' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -52,7 +52,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='7UP Lite' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -72,7 +72,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Aquafina' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -92,7 +92,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Cream Soda' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -112,7 +112,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Duke Soda' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -131,7 +131,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Evervess Soda' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -150,7 +150,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Ginger Beer' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -170,7 +170,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Mirinda Orange' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -192,7 +192,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Mountain Dew' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -212,7 +212,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Ole Soda' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -232,7 +232,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Pepsi' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -252,7 +252,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Pepsi Black' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -273,7 +273,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='STING' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -298,7 +298,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `brand`='Zingo' AND `updateDate`='$date' AND `area`='$area'");
                    while($row=mysqli_fetch_array($query)){
                   ?>
@@ -321,12 +321,12 @@
 
 <form action="addActually.php" method="POST">
 <input style="border: none; outline:none;" type='hidden' id='hasta' value='<?php echo $_GET['dateNew'];?>' name="date" readonly>
-<input type="hidden" name="area" value="<?php echo $_SESSION["uname"];  ?>" />
+<input type="hidden" name="area" value="<?php echo $_GET['area'];  ?>" />
 				<?php
 
 						
 
-					$area = $_SESSION["uname"];
+					$area = $_GET['area'];
 					//echo $area;
 
 
@@ -413,7 +413,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='1000ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -433,7 +433,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='1500ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -452,7 +452,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='2000ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -471,7 +471,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='200ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -491,7 +491,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='207ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -512,7 +512,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='2250ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -533,7 +533,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='250ml - CANS' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -554,7 +554,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='300ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -574,7 +574,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='330ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -594,7 +594,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='330ml - CANS' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -614,7 +614,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='345ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -634,7 +634,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='500ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -654,7 +654,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='750ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -675,7 +675,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='BIB - 05' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -696,7 +696,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='BIB - 10' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -716,7 +716,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='BIB - 20' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -736,7 +736,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='PMX' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -756,7 +756,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area =$_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='20000ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -776,7 +776,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='400ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
@@ -796,7 +796,7 @@
                 <?php
                   include('../database/conn.php');
                   $date=$_GET['dateNew'];
-                  $area = $_SESSION["uname"];
+                  $area = $_GET['area'];
                   $query=mysqli_query($conn,"select SUM(amount) AS value_sum from `temporystock` where `pack`='250ml' AND `updateDate`='$date' AND `area`='$area'");
                   while($row=mysqli_fetch_array($query)){
                   ?>
