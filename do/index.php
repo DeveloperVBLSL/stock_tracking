@@ -136,6 +136,15 @@
 		
 						<?php
 					}
+					else{
+					    echo "<h1 style='color:red;'>Importance</h1>
+					    
+					    <h3>Please select your area</h3>
+					    
+					    ";
+					    $image='<img width="30%"  src="sign.gif"/>';
+                        echo $image;
+					}
 					
 				?>
 		
@@ -146,5 +155,6 @@
 		
 	
 </div>
+
 </body>
 </html>
